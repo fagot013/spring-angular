@@ -23,6 +23,7 @@ public class SpringAngularApplication {
 				User user = new User(userName, userName.toLowerCase() + "@domain.com");
 				userRepository.save(user);
 			} );
+			userRepository.findAll().forEach(System.out::println);
 		};
 	}
 
